@@ -73,7 +73,7 @@
             }
             if(has(modrinthId)) {
                 num++;
-                fetch("https://api.modrinth.com/v2/project/"+spigotId)
+                fetch("https://api.modrinth.com/v2/project/"+modrinthId)
                     .then(async (response) => {
                         let json = await response.json();
 

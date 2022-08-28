@@ -133,12 +133,20 @@
     ]
 </script>
 <style>
-    .projects {
+    .center {
         text-align: center;
+    }
+    h1,h2,h3,h4 {
+        font-family: Jellee,ui-rounded;
     }
 </style>
 
-<div class="projects">
+
+<div class="center">
+    <h1>ajgeiss0702</h1>
+    cool and stuff<br>
+    <br>
+    <br>
     {#each projects as project (project)}
         <Project {...project}/>
     {/each}

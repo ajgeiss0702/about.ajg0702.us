@@ -1,3 +1,6 @@
+<svelte:head>
+    <title>ajgeiss0702</title>
+</svelte:head>
 <script>
     import Project from '$lib/Project.svelte';
 

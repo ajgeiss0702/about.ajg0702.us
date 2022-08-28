@@ -71,6 +71,25 @@
                         if(curr >= num) resolve(total)
                     })
             }
+            if(has(modrinthId)) {
+                num++;
+                fetch("https://api.modrinth.com/v2/project/"+spigotId)
+                    .then(async (response) => {
+                        let json = await response.json();
+
+                        if(has(json.downloads)) {
+                            let dl = json.downloads
+                            total += dl;
+                            console.debug(name+" Modrinth has "+dl);
+                        }
+
+                    })
+                    .catch(() => {})
+                    .finally(() => {
+                        curr++;
+                        if(curr >= num) resolve(total)
+                    })
+            }
 
 
             if(num === 0) resolve(0);

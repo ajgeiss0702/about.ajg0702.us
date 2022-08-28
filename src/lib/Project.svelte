@@ -195,7 +195,7 @@
         <LazyLoad height="0">
             <span class="icon">
             {#if has(icon)}
-                <img height="1.75em" src={icon} alt="{name} icon">
+                <img height="1.75em" width="43.75em" src={icon} alt="{name} icon">
             {/if}
         </span>
         </LazyLoad>

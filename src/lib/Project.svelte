@@ -192,11 +192,13 @@
 <div class="outer">
     <span class="title">
         {name}
-        <span class="icon">
+        <LazyLoad height="0">
+            <span class="icon">
             {#if has(icon)}
-                <img src={icon} alt="{name} icon">
+                <img height="1.75em" src={icon} alt="{name} icon">
             {/if}
         </span>
+        </LazyLoad>
     </span>
 
     <hr>

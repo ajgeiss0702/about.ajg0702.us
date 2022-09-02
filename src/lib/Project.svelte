@@ -5,15 +5,15 @@
     import LazyLoad from '@dimfeld/svelte-lazyload';
 
     export let name;
-    export let icon;
+    export let icon = undefined;
     export let description;
-    export let spigotId;
-    export let polymartId;
-    export let modrinthId;
-    export let github;
-    export let gitlab;
-    export let webpage;
-    export let docs;
+    export let spigotId = undefined;
+    export let polymartId = undefined;
+    export let modrinthId = undefined;
+    export let github = undefined;
+    export let gitlab = undefined;
+    export let webpage = undefined;
+    export let docs = undefined;
 
     /**
      * @returns {boolean}

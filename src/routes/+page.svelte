@@ -149,6 +149,7 @@
     <h1>ajgeiss0702</h1>
     cool and stuff<br>
     <br>
+    <h2 id="projects">Projects</h2>
     <br>
     {#each projects as project (project)}
         <Project {...project}/>

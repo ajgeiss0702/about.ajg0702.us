@@ -238,7 +238,7 @@
 
         {#if has(spigotId)}
             <a href="https://spigotmc.org/resources/{spigotId}" target="_blank">
-                <img src="/img/spigot.ico" alt="Link to {name} on Spigot">
+                <img src="/land/img/spigot.ico" alt="Link to {name} on Spigot">
             </a>
         {/if}
 

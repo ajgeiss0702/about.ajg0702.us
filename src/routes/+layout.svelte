@@ -55,7 +55,7 @@
     }
     @media (prefers-color-scheme: dark) {
         nav {
-            background-color: rgba(0, 0, 0, 0.1);
+            background-color: rgba(0, 0, 0, 0.5);
         }
         .line {
             background-color: white !important;
@@ -152,7 +152,7 @@
 </style>
 
 <nav on:click={toggleHamburger}>
-    <a href="/land/">
+    <a href="/">
         <img src="https://ajg0702.us/pics/logo.png" alt="ajgeiss0702 logo">
     </a>
     &nbsp;
@@ -165,10 +165,10 @@
 
     <div class="links hidden">
         <a style="padding:0;"></a> <!-- this needs to be here because other wise the first link is indented on mobile for some reason -->
-        <a href="/land/#intro">
+        <a href="/#intro">
             Introduction
         </a>
-        <a href="/land/#projects">
+        <a href="/#projects">
             Projects
         </a>
     </div>

@@ -55,7 +55,7 @@
     }
     @media (prefers-color-scheme: dark) {
         nav {
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.1);
         }
         .line {
             background-color: white !important;

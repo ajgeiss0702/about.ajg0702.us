@@ -148,6 +148,9 @@
         :global(.paragraph) {
             max-width: 60vw;
         }
+        nav {
+            padding-left: 1em;
+        }
     }
 </style>
 

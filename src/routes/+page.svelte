@@ -139,9 +139,6 @@
     .center {
         text-align: center;
     }
-    h1,h2,h3,h4 {
-        font-family: Jellee,ui-rounded;
-    }
 </style>
 
 

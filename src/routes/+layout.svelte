@@ -152,6 +152,10 @@
             padding-left: 1em;
         }
     }
+
+    :global(h1,h2,h3,h4) {
+        font-family: JelleeBold,ui-rounded;
+    }
 </style>
 
 <nav on:click={toggleHamburger}>

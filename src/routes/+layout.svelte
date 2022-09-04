@@ -171,7 +171,7 @@
     </div>
 
     <div class="links hidden">
-        <a style="padding:0;"></a> <!-- this needs to be here because other wise the first link is indented on mobile for some reason -->
+        <a href="about:blank" style="padding: 0;margin: 0;text-decoration: none;">&nbsp;</a> <!-- this needs to be here because other wise the first link is indented on mobile for some reason -->
         <a href="/#intro">
             Introduction
         </a>

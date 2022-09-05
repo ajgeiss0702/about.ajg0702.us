@@ -21,7 +21,7 @@
             icon: "https://ajg0702.us/pl/icons/ajQueue.png",
             spigotId: "78266",
             polymartId: "2535",
-            modrinthId: "",
+            modrinthId: "dzacATni",
             github: "ajgeiss0702/ajQueue",
             docs: "ajQueue"
         },

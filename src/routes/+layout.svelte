@@ -156,6 +156,11 @@
     :global(h1,h2,h3,h4) {
         font-family: JelleeBold,ui-rounded;
     }
+    :global(.hidden-link) {
+        color: inherit;
+        text-decoration: none;
+        cursor: inherit;
+    }
 </style>
 
 <nav on:click={toggleHamburger}>

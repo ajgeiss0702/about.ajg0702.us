@@ -28,6 +28,8 @@
         -webkit-backdrop-filter: blur(5px);
 
         z-index: 100;
+        padding: 3px;
+        margin: 0;
     }
     img {
         height: 1.75em;
@@ -185,6 +187,7 @@
         </a>
     </div>
 </nav>
+<br>
 <br>
 <br>
 

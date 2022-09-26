@@ -1,5 +1,20 @@
 <script>
     export const prerender = true;
+
+    function toggleHamburger(e) {
+        let check = document.getElementById("hamburger-check");
+        let collapsable = document.querySelector("div.links");
+        if(e.target.tagName === "A") {
+            check.checked = false;
+            console.log("unchecking!")
+        }
+        if(check.checked) {
+            collapsable.classList.remove("hidden");
+        } else {
+            collapsable.classList.add("hidden");
+        }
+        console.log("hidden: " + collapsable.classList.contains("hidden"));
+    }
 </script>
 <style>
 
@@ -193,22 +208,5 @@
 <br>
 <br>
 <br>
-
-<script>
-    function toggleHamburger(e) {
-        let check = document.getElementById("hamburger-check");
-        let collapsable = document.querySelector("div.links");
-        if(e.target.tagName === "A") {
-            check.checked = false;
-            console.log("unchecking!")
-        }
-        if(check.checked) {
-            collapsable.classList.remove("hidden");
-        } else {
-            collapsable.classList.add("hidden");
-        }
-        console.log("hidden: " + collapsable.classList.contains("hidden"));
-    }
-</script>
 
 <slot></slot>

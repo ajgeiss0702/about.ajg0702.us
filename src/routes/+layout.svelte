@@ -1,6 +1,4 @@
 <script>
-    export const prerender = true;
-
     function toggleHamburger(e) {
         let check = document.getElementById("hamburger-check");
         let collapsable = document.querySelector("div.links");

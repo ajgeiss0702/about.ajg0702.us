@@ -117,7 +117,7 @@ export let projects: Project[] = [
     {
         name: "Bytebin",
         description: "My fork of Bytebin that has modifications for my self-hosted site.",
-        icon: "https://i.imgur.com/0dofgB4.png",
+        icon: "/img/bytebin.png",
         github: "ajgeiss0702/bytebin/",
         webpage: "https://paste.ajg0702.us/"
     },

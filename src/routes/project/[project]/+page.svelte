@@ -61,7 +61,9 @@
 </style>
 <div class="container">
     <div class="header">
-        <img src={project.icon} alt="{project.name} icon" height="64" width="64">
+        {#if project.icon}
+            <img src={project.icon} alt="{project.name} icon" height="64" width="64">
+        {/if}
         <div class="title-container">
             <h2>{project.name}</h2>
             {project.description}

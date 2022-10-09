@@ -43,6 +43,11 @@
             background-color: rgba(0, 0, 0, 0.1);
         }
     }
+    @media (orientation: portrait) {
+        .outer {
+            width: 80vw;
+        }
+    }
 
     .title {
         text-align: left;

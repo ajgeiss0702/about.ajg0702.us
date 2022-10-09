@@ -114,11 +114,7 @@
     </span>
 
     <span class="downloads">
-        {#if has(project.modrinthId) || has(project.polymartId) || has(project.spigotId)}
-            <DownloadCounter {project}/>
-        {:else}
-            &nbsp;
-        {/if}
+        <DownloadCounter {project}/>
     </span>
 
     <span class="icons">

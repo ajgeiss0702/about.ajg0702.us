@@ -6,7 +6,7 @@
 
     export let project;
 
-    let downloads;
+    let downloads = getDownloads(project);
 </script>
 <style>
     .downloads {

@@ -3,102 +3,12 @@
     import Icon from '@iconify/svelte';
     import Button from '$lib/Button.svelte';
     import LazyLoad from '@dimfeld/svelte-lazyload';
+    import {has} from "$lib/utils.ts";
+    import DownloadCounter from "$lib/DownloadCounter.svelte";
 
-    export let name;
-    export let icon = undefined;
-    export let description;
-    export let spigotId = undefined;
-    export let polymartId = undefined;
-    export let modrinthId = undefined;
-    export let github = undefined;
-    export let gitlab = undefined;
-    export let webpage = undefined;
-    export let docs = undefined;
-
-    /**
-     * @returns {boolean}
-     */
-    function has(arg) {
-        return typeof arg !== 'undefined';
-    }
+    export let project;
 
     let downloads = new Promise(() => {});
-
-    /**
-     * @returns {Promise}
-     */
-    function getDownloads() {
-        return new Promise(resolve => {
-            let total = 0;
-            let curr = 0;
-            let num = 0;
-
-            if(has(spigotId)) {
-                num++;
-                fetch("https://api.spiget.org/v2/resources/"+spigotId)
-                    .then(async (response) => {
-                        let json = await response.json();
-
-                        if(has(json.downloads)) {
-                            let dl = json.downloads
-                            total += dl;
-                            console.debug(name+" Spigot has "+dl);
-                        }
-
-                    })
-                    .catch(() => {})
-                    .finally(() => {
-                        curr++;
-                        if(curr >= num) resolve(total)
-                    })
-            }
-            if(has(polymartId)) {
-                num++;
-                fetch("https://api.polymart.org/v1/getResourceInfo/?resource_id="+polymartId)
-                    .then(async (response) => {
-                        let json = await response.json();
-
-                        if(has(json.response) && has(json.response.resource) && has(json.response.resource.downloads)) {
-                            let dl = Number(json.response.resource.downloads);
-                            total += dl;
-                            console.debug(name+" Polymart has "+dl);
-                        }
-
-                    })
-                    .catch(() => {})
-                    .finally(() => {
-                        curr++;
-                        if(curr >= num) resolve(total)
-                    })
-            }
-            if(has(modrinthId)) {
-                num++;
-                fetch("https://api.modrinth.com/v2/project/"+modrinthId)
-                    .then(async (response) => {
-                        let json = await response.json();
-
-                        if(has(json.downloads)) {
-                            let dl = json.downloads
-                            total += dl;
-                            console.debug(name+" Modrinth has "+dl);
-                        }
-
-                    })
-                    .catch(() => {})
-                    .finally(() => {
-                        curr++;
-                        if(curr >= num) resolve(total)
-                    })
-            }
-
-
-            if(num === 0) resolve(0);
-        });
-    }
-
-    function commas(x) {
-        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }
 </script>
 
 <style>
@@ -166,15 +76,6 @@
         display: block;
     }
 
-    .downloads {
-        font-size: 1em;
-        font-family: ui-rounded;
-        margin-left: auto;
-        line-height: 0.5em;
-        padding-bottom: 0.5em;
-        text-align: left;
-    }
-
     .docs {
         text-align: right;
         display: block;
@@ -191,11 +92,11 @@
 
 <div class="outer">
     <span class="title">
-        {name}
+        <a href="/project/{project.name}">{project.name}</a>
         <LazyLoad height="0">
             <span class="icon">
-            {#if has(icon)}
-                <img height="1.75em" width="43.75em" src={icon} alt="{name} icon">
+            {#if has(project.icon)}
+                <img height="1.75em" width="43.75em" src={project.icon} alt="{project.name} icon">
             {/if}
         </span>
         </LazyLoad>
@@ -204,59 +105,51 @@
     <hr>
 
     <span class="description">
-        {description}
+        {project.description}
     </span>
 
     <span class="downloads">
-        {#if has(modrinthId) || has(polymartId) || has(spigotId)}
-            <Icon icon="bx:download" alt="Download count"/>
-            {#await downloads}
-                <Icon icon="eos-icons:loading" alt="Loading"/>&nbsp;
-            {:then number}
-                {commas(number)}
-            {:catch error}
-                <Icon icon="icon-park-solid:caution" alt="Error"/>
-            {/await}
-            <LazyLoad height="0" on:visible={() => downloads = getDownloads()}/>
+        {#if has(project.modrinthId) || has(project.polymartId) || has(project.spigotId)}
+            <DownloadCounter {project}/>
         {:else}
             &nbsp;
         {/if}
     </span>
 
     <span class="icons">
-        {#if has(modrinthId)}
-            <a href="https://modrinth.com/plugin/{modrinthId}" target="_blank">
-                <img src="https://modrinth.com/favicon.ico" alt="Link to {name} on Modrinth">
+        {#if has(project.modrinthId)}
+            <a href="https://modrinth.com/plugin/{project.modrinthId}" target="_blank">
+                <img src="https://modrinth.com/favicon.ico" alt="Link to {project.name} on Modrinth">
             </a>
         {/if}
 
-        {#if has(polymartId)}
-            <a href="https://polymart.org/resource/{polymartId}" target="_blank">
-                <img src="https://polymart.org/style/logo_96.png" alt="Link to {name} on Polymart">
+        {#if has(project.polymartId)}
+            <a href="https://polymart.org/resource/{project.polymartId}" target="_blank">
+                <img src="https://polymart.org/style/logo_96.png" alt="Link to {project.name} on Polymart">
             </a>
         {/if}
 
-        {#if has(spigotId)}
-            <a href="https://spigotmc.org/resources/{spigotId}" target="_blank">
-                <img src="/img/spigot.ico" alt="Link to {name} on Spigot">
+        {#if has(project.spigotId)}
+            <a href="https://spigotmc.org/resources/{project.spigotId}" target="_blank">
+                <img src="/img/spigot.ico" alt="Link to {project.name} on Spigot">
             </a>
         {/if}
 
-        {#if has(github) || has(gitlab)}
-            <a href="https://{github ? 'github' : 'gitlab'}.com/{github ? github : gitlab}" target="_blank">
-                <Icon icon="carbon:code" alt="Link to {name} on {github ? 'GitHub' : 'GitLab'}"/>
+        {#if has(project.github) || has(project.gitlab)}
+            <a href="https://{project.github ? 'github' : 'gitlab'}.com/{project.github ? project.github : project.gitlab}" target="_blank">
+                <Icon icon="carbon:code" alt="Link to {project.name} on {project.github ? 'GitHub' : 'GitLab'}"/>
             </a>
         {/if}
 
-        {#if has(webpage)}
-            <a href="{webpage}" target="_blank">
-                <Icon icon="mdi:web" alt="Link to {name}"/>
+        {#if has(project.webpage)}
+            <a href="{project.webpage}" target="_blank">
+                <Icon icon="mdi:web" alt="Link to {project.name}"/>
             </a>
         {/if}
 
         <span class="docs">
-            {#if has(docs)}
-                <Button href="https://wiki.ajg0702.us/{docs}" target="_blank">Docs</Button>
+            {#if has(project.docs)}
+                <Button href="https://wiki.ajg0702.us/{project.docs}" target="_blank">Docs</Button>
             {:else}
                 &nbsp;
             {/if}

@@ -1,4 +1,24 @@
 <script>
+    // NProgress css
+    import 'nprogress/nprogress.css';
+    import {navigating} from "$app/stores";
+    import NProgress from 'nprogress';
+
+    NProgress.configure({
+        // Full list: https://github.com/rstacruz/nprogress#configuration
+        minimum: 0.16
+    });
+
+    $: {
+        if ($navigating) {
+            NProgress.start();
+        }
+        if (!$navigating) {
+            NProgress.done();
+        }
+    }
+
+
     function toggleHamburger(e) {
         let check = document.getElementById("hamburger-check");
         let collapsable = document.querySelector("div.links");
@@ -15,6 +35,17 @@
     }
 </script>
 <style>
+
+    :global(#nprogress .spinner-icon) {
+        border-top-color: goldenrod;
+        border-left-color: goldenrod;
+    }
+    :global(#nprogress .peg) {
+        box-shadow: 0 0 10px goldenrod, 0 0 5px goldenrod;
+    }
+    :global(#nprogress .bar) {
+        background: goldenrod;
+    }
 
     :global(.anchor) {
         height: 0;

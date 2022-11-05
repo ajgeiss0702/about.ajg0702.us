@@ -3,6 +3,7 @@
     import 'nprogress/nprogress.css';
     import {navigating} from "$app/stores";
     import NProgress from 'nprogress';
+    import "$lib/misc.css";
 
     NProgress.configure({
         // Full list: https://github.com/rstacruz/nprogress#configuration

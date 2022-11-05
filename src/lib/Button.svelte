@@ -23,5 +23,5 @@
     }
 </style>
 <a {href} {target}>
-    <slot></slot>
+    <slot/>
 </a>

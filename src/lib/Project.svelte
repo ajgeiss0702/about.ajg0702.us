@@ -100,11 +100,18 @@
         <a href="/project/{project.name}">{project.name}</a>
         <LazyLoad height="0">
             <span class="icon">
-            {#if has(project.icon)}
-                <img height="1.75em" width="43.75em" src={project.icon} alt="{project.name} icon">
-            {/if}
-        </span>
+                {#if has(project.icon)}
+                    <img height="1.75em" width="43.75em" src={project.icon} alt="{project.name} icon">
+                {/if}
+            </span>
         </LazyLoad>
+        <noscript>
+            <span class="icon">
+                {#if has(project.icon)}
+                    <img height="1.75em" width="43.75em" src={project.icon} alt="{project.name} icon">
+                {/if}
+            </span>
+        </noscript>
     </span>
 
     <hr>

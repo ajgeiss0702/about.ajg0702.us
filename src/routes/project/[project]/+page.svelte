@@ -1,8 +1,16 @@
 <svelte:head>
     <title>{project.name} - ajgeiss0702</title>
+
+    <meta property="og:title" content="{project.name}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://about.ajg0702.us" />
+    {#if project.icon}
+        <meta property="og:image" content="{project.icon}" />
+    {/if}
+    <meta property="og:description" content="{project.description}" />
 </svelte:head>
 <script lang="ts">
-    import {Project} from "$lib/projects";
+    import {type Project} from "$lib/projects";
     import DownloadCounter from "$lib/DownloadCounter.svelte";
     import {has} from "$lib/utils";
     import Icon from "@iconify/svelte";
@@ -10,6 +18,7 @@
 
     export let data: Project;
 
+    let project = data;
     $: project = data;
 </script>
 <style>

@@ -1,5 +1,3 @@
-import * as url from "url";
-
 export type Project = {
     name: string,
     description: string,

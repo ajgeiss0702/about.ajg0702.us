@@ -21,6 +21,11 @@
     a:hover {
         border-color: darkgoldenrod;
     }
+    @media (prefers-color-scheme: light) {
+        a {
+            color: darkgoldenrod;
+        }
+    }
 </style>
 <a {href} {target}>
     <slot/>

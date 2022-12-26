@@ -35,7 +35,8 @@
 
     @media (prefers-color-scheme: light) {
         .outer {
-            background-color: rgba(0, 0, 0, 0.065);
+            background-color: rgba(0, 0, 0, 0.025);
+
         }
     }
     @media (prefers-color-scheme: dark) {

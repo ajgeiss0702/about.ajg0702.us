@@ -1,6 +1,7 @@
 <script>
     export let href;
     export let target = "_self";
+    export let aria_label;
 </script>
 <style>
     a {
@@ -27,6 +28,6 @@
         }
     }
 </style>
-<a {href} {target}>
+<a {href} {target} {aria_label}>
     <slot/>
 </a>

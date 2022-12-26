@@ -132,38 +132,38 @@
 
     <span class="icons">
         {#if has(project.modrinthId)}
-            <a href="https://modrinth.com/plugin/{project.modrinthId}" target="_blank">
+            <a href="https://modrinth.com/plugin/{project.modrinthId}" target="_blank" aria-label="Link to {project.name} on Modrinth">
                 <img src="https://modrinth.com/favicon.ico" alt="Link to {project.name} on Modrinth">
             </a>
         {/if}
 
         {#if has(project.polymartId)}
-            <a href="https://polymart.org/resource/{project.polymartId}" target="_blank">
+            <a href="https://polymart.org/resource/{project.polymartId}" target="_blank"  aria-label="Link to {project.name} on Polymart">
                 <img src="https://polymart.org/style/logo_96.png" alt="Link to {project.name} on Polymart">
             </a>
         {/if}
 
         {#if has(project.spigotId)}
-            <a href="https://spigotmc.org/resources/{project.spigotId}" target="_blank">
+            <a href="https://spigotmc.org/resources/{project.spigotId}" target="_blank"  aria-label="Link to {project.name} on Spigot">
                 <img src="/img/spigot.ico" alt="Link to {project.name} on Spigot">
             </a>
         {/if}
 
         {#if has(project.github) || has(project.gitlab)}
-            <a href="https://{project.github ? 'github' : 'gitlab'}.com/{project.github ? project.github : project.gitlab}" target="_blank">
+            <a href="https://{project.github ? 'github' : 'gitlab'}.com/{project.github ? project.github : project.gitlab}" target="_blank"  aria-label="Link to the source code for {project.name}">
                 <Icon icon="carbon:code" alt="Link to {project.name} on {project.github ? 'GitHub' : 'GitLab'}"/>
             </a>
         {/if}
 
         {#if has(project.webpage)}
-            <a href="{project.webpage}" target="_blank">
+            <a href="{project.webpage}" target="_blank"  aria-label="Link to the webpage for {project.name}">
                 <Icon icon="mdi:web" alt="Link to {project.name}"/>
             </a>
         {/if}
 
         <span class="docs">
             {#if has(project.docs)}
-                <Button href="https://wiki.ajg0702.us/{project.docs}" target="_blank">Docs</Button>
+                <Button href="https://wiki.ajg0702.us/{project.docs}" target="_blank"  aria_label="Link to {project.name}'s docs">Docs</Button>
             {:else}
                 &nbsp;
             {/if}

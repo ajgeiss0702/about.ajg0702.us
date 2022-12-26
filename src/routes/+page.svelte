@@ -18,7 +18,7 @@
 
 <div class="center">
     <h1>ajgeiss0702</h1>
-    <h3>Hello!</h3>
+    <h2>Hello!</h2>
     <div id="intro" class="anchor"></div>
     <p class="paragraph">
         I'm <a href="hello" class="hidden-link">aj</a>, and I am a developer. I mainly write in java, but I also occasionally make web pages (such as this one).

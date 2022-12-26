@@ -13,7 +13,7 @@ const config = {
 		}),
 		csp: {
 			directives: {
-				'script-src': ['self']
+				'object-src': ['self', "https://static.cloudflareinsights.com/beacon.min.js"]
 			}
 		}
 	}

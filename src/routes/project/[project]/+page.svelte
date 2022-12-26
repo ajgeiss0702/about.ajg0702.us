@@ -15,6 +15,8 @@
     import {has} from "$lib/utils";
     import Icon from "@iconify/svelte";
     import Button from "$lib/Button.svelte";
+    import Tag from "$lib/Tag.svelte";
+    import {capitalize} from "$lib/utils";
 
     export let data: Project;
 
@@ -66,6 +68,10 @@
         font-size: 2em;
     }
 
+    a.tag {
+        color: inherit;
+    }
+
     @media (orientation: landscape) {
         div.header {
             display: inline-flex;
@@ -109,6 +115,13 @@
         </div>
         <hr>
         <br>
+
+        {#each project.tags as tag}
+            <Tag><a class="tag" href="/tag/{tag}">{capitalize(tag.replaceAll("-", " "))}</a></Tag>
+            <span></span>
+        {/each}
+
+        <br>
         <h3>Pages:</h3>
         {#if has(project.modrinthId)}
             <a href="https://modrinth.com/plugin/{project.modrinthId}" target="_blank">
@@ -149,6 +162,7 @@
         {#if has(project.webpage)}
             <a href="{project.webpage}" target="_blank">
                 <Icon icon="mdi:web" alt="Link to {project.name}"/>
+                Webpage
             </a>
             <br>
         {/if}

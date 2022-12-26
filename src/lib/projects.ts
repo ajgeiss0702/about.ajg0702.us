@@ -8,10 +8,21 @@ export type Project = {
     github?: string,
     gitlab?: string
     docs?: string,
-    webpage?: string
+    webpage?: string,
+    tags: ProjectType[]
 }
 
-export let projects: Project[] = [
+export type ProjectType =
+    "plugin" | "plugin-library" | "website" | "discord-bot" | Language
+
+export type Language = "java" | "svelte" | "javascript";
+export enum Languages {
+    "java",
+    "svelte",
+    "javascript"
+}
+
+export const projects: Project[] = [
     {
         name: "ajLeaderboards",
         description: "Create leaderboards for almost anything in minecraft, using PlaceholderAPI.",
@@ -20,7 +31,8 @@ export let projects: Project[] = [
         polymartId: "2726",
         modrinthId: "C9BKEl8Y",
         github: "ajgeiss0702/ajLeaderboards",
-        docs: "ajLeaderboards"
+        docs: "ajLeaderboards",
+        tags: ["plugin", "java"]
     },
     {
         name: "ajQueue",
@@ -30,7 +42,8 @@ export let projects: Project[] = [
         polymartId: "2535",
         modrinthId: "dzacATni",
         github: "ajgeiss0702/ajQueue",
-        docs: "ajQueue"
+        docs: "ajQueue",
+        tags: ["plugin", "java"]
     },
     {
         name: "ajQueuePlus",
@@ -39,7 +52,8 @@ export let projects: Project[] = [
         spigotId: "79123",
         polymartId: "2714",
         github: "ajgeiss0702/ajQueue",
-        docs: "ajQueue"
+        docs: "ajQueue",
+        tags: ["plugin", "java"]
     },
     {
         name: "ajAntiXray",
@@ -47,7 +61,8 @@ export let projects: Project[] = [
         icon: "https://ajg0702.us/pl/icons/ajAntiXray.png",
         spigotId: "68409",
         gitlab: "ajg0702/ajAntiXray",
-        docs: "ajAntiXray"
+        docs: "ajAntiXray",
+        tags: ["plugin", "java"]
     },
     {
         name: "ajParkour",
@@ -55,7 +70,8 @@ export let projects: Project[] = [
         icon: "https://ajg0702.us/pl/icons/ajParkour.png",
         spigotId: "60909",
         gitlab: "ajg0702/ajParkour",
-        docs: "ajParkour"
+        docs: "ajParkour",
+        tags: ["plugin", "java"]
     },
     {
         name: "ajTNTRun",
@@ -63,27 +79,31 @@ export let projects: Project[] = [
         icon: "https://ajg0702.us/pl/icons/ajTNTRun.png",
         spigotId: "70502",
         gitlab: "ajg0702/ajTNTRun",
-        docs: "ajTNTRun"
+        docs: "ajTNTRun",
+        tags: ["plugin", "java"]
     },
     {
         name: "ajLb REST",
         description: "An addon for ajLeaderboards that allows you to fetch leaderboards via a REST api",
         icon: "https://ajg0702.us/pl/icons/ajLb-REST.png",
         spigotId: "101650",
-        github: "ajgeiss0702/ajLb-REST/"
+        github: "ajgeiss0702/ajLb-REST/",
+        tags: ["plugin", "java"]
     },
     {
         name: "ajElimination",
         description: "Keep track of how many players are left alive in events!",
         icon: "https://ajg0702.us/pl/icons/ajElimination.png",
         spigotId: "80587",
-        gitlab: "ajg0702/ajElimination/"
+        gitlab: "ajg0702/ajElimination/",
+        tags: ["plugin", "java"]
     },
     {
         name: "ajAFKKick",
         description: "Kick AFK players only when the server is full!",
         icon: "https://ajg0702.us/pl/icons/ajAFKKick.png",
         spigotId: "80288",
+        tags: ["plugin", "java"]
     },
     {
         name: "ajStartCommands",
@@ -91,7 +111,8 @@ export let projects: Project[] = [
         icon: "https://ajg0702.us/pl/icons/ajStartCommands.png",
         spigotId: "31033",
         gitlab: "ajg0702/ajStartCommands/",
-        docs: "ajStartCommands"
+        docs: "ajStartCommands",
+        tags: ["plugin", "java"]
     },
     {
         name: "NoChatWhileVanished",
@@ -99,45 +120,82 @@ export let projects: Project[] = [
         icon: "https://ajg0702.us/pl/icons/NoChatWhileVanished.png",
         spigotId: "75141",
         gitlab: "ajg0702/NoChatWhileVanished/",
+        tags: ["plugin", "java"]
     },
     {
         name: "Anti-Build",
         description: "Prevents everyone from building.",
         icon: "https://ajg0702.us/pl/icons/Anti-Build.png",
         spigotId: "9550",
+        tags: ["plugin", "java"]
     },
     {
         name: "aj's Global Chat Mute",
         description: "Mute the chat!",
         icon: "https://ajg0702.us/pl/icons/ajGlobalChatMute.png",
         spigotId: "9587",
+        tags: ["plugin", "java"]
     },
     {
         name: "Bytebin",
         description: "My fork of Bytebin that has modifications for my self-hosted site.",
         icon: "/img/bytebin.png",
         github: "ajgeiss0702/bytebin/",
-        webpage: "https://paste.ajg0702.us/"
+        webpage: "https://paste.ajg0702.us/",
+        tags: ["website"]
     },
     {
         name: "VulcanTopGUI",
         description: "An addon for the Vulcan anticheat that opens a GUI of the top player violations ",
         github: "ajgeiss0702/VulcanTopGUI/",
+        tags: ["plugin", "java"]
     },
     {
         name: "ajSupport",
         description: "A discord bot that assists me in my plugins support discord",
         icon: "https://ajg0702.us/pics/bots/ajSupport.png",
         github: "ajgeiss0702/ajSupport/",
+        tags: ["discord-bot", "java"]
     },
     {
         name: "ajLavaRising",
         description: "A lag-less lava rising plugin ",
         github: "ajgeiss0702/ajLavaRising/",
+        tags: ["plugin", "java"]
     },
     {
         name: "ajHologramConnector",
         description: "One library for all the major hologram plugin APIs (with bukkit fallback)",
         github: "ajgeiss0702/ajHologramConnector/",
+        tags: ["plugin-library", "java"]
     },
+    {
+        name: "About ajgeiss0702",
+        icon: "/favicon.png",
+        description: "This site!",
+        webpage: "/",
+        github: "ajgeiss0702/about.ajg0702.us",
+        tags: ["website", "svelte"]
+    },
+    {
+        name: "Red Clock",
+        icon: "https://redclock.fun/red_clock.png",
+        description: "Shows the amount of time until the school bell rings",
+        webpage: "https://redclock.fun",
+        tags: ["website", "svelte"]
+    },
+    {
+        name: "BASIS Peoria Boosters",
+        icon: "https://www.basispeoriaboosters.org/favicon.png",
+        description: "Informational website for BASIS Peoria Boosters (made entirely myself using SvelteKit)",
+        webpage: "https://www.basispeoriaboosters.org",
+        tags: ["website", "svelte"]
+    },
+    {
+        name: "ajLb Viewer",
+        description: "A website that makes viewing exports from ajLeaderboards a lot easier",
+        webpage: "https://ajlb-viewer.ajg0702.us/",
+        github: "ajgeiss0702/ajlb-viewer",
+        tags: ["website", "svelte"]
+    }
 ]

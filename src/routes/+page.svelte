@@ -4,10 +4,14 @@
 <script>
     import Project from '$lib/Project.svelte';
     import {projects} from "$lib/projects.ts";
+    import Tag from "$lib/Tag.svelte";
 </script>
 <style>
     .center {
         text-align: center;
+    }
+    a.tag {
+        color: inherit;
     }
 </style>
 
@@ -25,6 +29,9 @@
     <br>
     <h2>Projects</h2>
     <div id="projects" class="anchor"></div>
+    Some projects i've made<br>
+    <br>
+    Click a tag (e.g. <Tag><a class="tag" href="/tag/plugin">Plugin</a></Tag>) to show projects in that tag
     <br>
     {#each projects as project (project)}
         <Project {project}/>

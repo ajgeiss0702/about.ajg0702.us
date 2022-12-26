@@ -5,10 +5,10 @@
     import LazyLoad from '@dimfeld/svelte-lazyload';
     import {has} from "$lib/utils.ts";
     import DownloadCounter from "$lib/DownloadCounter.svelte";
+    import Tag from "$lib/Tag.svelte";
+    import {capitalize} from "$lib/utils";
 
     export let project;
-
-    let downloads = new Promise(() => {});
 </script>
 
 <style>
@@ -123,6 +123,11 @@
     <span class="downloads">
         <DownloadCounter {project}/>
     </span>
+
+    {#each project.tags as tag}
+        <Tag><a href="/tag/{tag}">{capitalize(tag.replaceAll("-", " "))}</a></Tag>
+        <span></span>
+    {/each}
 
     <span class="icons">
         {#if has(project.modrinthId)}

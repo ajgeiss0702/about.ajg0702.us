@@ -76,7 +76,7 @@
         -webkit-backdrop-filter: blur(5px);
 
         z-index: 100;
-        padding: 3px;
+        padding: 10px 3px 3px;
         margin: 0;
     }
     img {
@@ -211,11 +211,15 @@
         text-decoration: none;
         cursor: inherit;
     }
+
+    img {
+        font-family: JelleeBold,ui-rounded;
+    }
 </style>
 
 <nav on:click={toggleHamburger}>
     <a href="/">
-        <img src="https://ajg0702.us/pics/logo.png" alt="ajgeiss0702 logo">
+        <img src="https://ajg0702.us/pics/logo.png" alt="ajgeiss0702">
     </a>
     &nbsp;
     <div class="hamburger-container">

@@ -1,4 +1,5 @@
 import type {Project} from "./projects";
+import {Languages} from "./projects";
 
 
 export function getDownloads(project: Project) {
@@ -78,4 +79,19 @@ export function has(arg: any): boolean {
 export function commas(x: number) {
     if(typeof x == "undefined") return undefined;
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+export function capitalize(s: string) {
+    return s.charAt(0).toUpperCase() + s.substring(1);
+}
+
+export function pluralize(s: string) {
+    if(s in Languages) {
+        return s + " projects"
+    }
+    if(s.endsWith("y")) {
+        return s.substring(0, s.length-1) + "ies"
+    } else {
+        return s + "s";
+    }
 }

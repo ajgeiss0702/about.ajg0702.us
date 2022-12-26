@@ -186,7 +186,7 @@ export const projects: Project[] = [
     },
     {
         name: "BASIS Peoria Boosters",
-        icon: "https://www.basispeoriaboosters.org/favicon.png",
+        icon: "https://basis-peoria-boosters.pages.dev/favicon.png",
         description: "Informational website for BASIS Peoria Boosters (made entirely myself using SvelteKit)",
         webpage: "https://www.basispeoriaboosters.org",
         tags: ["website", "svelte"]

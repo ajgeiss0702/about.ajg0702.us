@@ -40,7 +40,7 @@ export const projects: Project[] = [
         icon: "https://ajg0702.us/pl/icons/ajQueue.png",
         spigotId: "78266",
         polymartId: "2535",
-        modrinthId: "dzacATni",
+        //modrinthId: "dzacATni",
         github: "ajgeiss0702/ajQueue",
         docs: "ajQueue",
         tags: ["plugin", "java"]

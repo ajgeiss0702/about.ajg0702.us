@@ -183,7 +183,7 @@
             top: 8px;
         }
 
-        .links>a::after {
+        .links>*::after {
             content: "\a";
             white-space: pre-line;
         }
@@ -230,7 +230,7 @@
     </div>
 
     <div class="links hidden">
-        <a href="about:blank" style="padding: 0;margin: 0;text-decoration: none;" aria-hidden="true">&nbsp;</a> <!-- this needs to be here because other wise the first link is indented on mobile for some reason -->
+        <span style="padding: 0;margin: 0;text-decoration: none;" aria-hidden="true">&nbsp;</span> <!-- this needs to be here because other wise the first link is indented on mobile for some reason -->
         <a href="/#intro">
             Introduction
         </a>

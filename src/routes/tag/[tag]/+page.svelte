@@ -4,7 +4,14 @@
     import Project from "$lib/Project.svelte";
 
     export let data;
-    let title = capitalize(pluralize(data.tag)).replaceAll("-", " ");
+
+    let title;
+    $: updateTitle(data);
+
+    function updateTitle(data) {
+        title = capitalize(pluralize(data.tag)).replaceAll("-", " ");
+    }
+
 </script>
 <svelte:head>
     <title>{title}</title>

@@ -133,7 +133,7 @@
     <span class="icons">
         {#if has(project.modrinthId)}
             <a href="https://modrinth.com/plugin/{project.modrinthId}" target="_blank" aria-label="Link to {project.name} on Modrinth">
-                <img src="https://modrinth.com/favicon.ico" alt="Link to {project.name} on Modrinth">
+                <img src="/img/modrinth.webp" alt="Link to {project.name} on Modrinth">
             </a>
         {/if}
 
@@ -145,7 +145,7 @@
 
         {#if has(project.spigotId)}
             <a href="https://spigotmc.org/resources/{project.spigotId}" target="_blank"  aria-label="Link to {project.name} on Spigot">
-                <img src="/img/spigot.ico" alt="Link to {project.name} on Spigot">
+                <img src="/img/spigot.webp" alt="Link to {project.name} on Spigot">
             </a>
         {/if}
 

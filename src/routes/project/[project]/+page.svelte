@@ -8,6 +8,7 @@
         <meta property="og:image" content="{project.icon}" />
     {/if}
     <meta property="og:description" content="{project.description}" />
+    <meta name="description" content="{project.description}" />
 </svelte:head>
 <script lang="ts">
     import {type Project} from "$lib/projects";

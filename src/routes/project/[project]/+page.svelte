@@ -97,6 +97,12 @@
             box-shadow: 0 0 33px -15px rgba(0,0,0,0.75);
         }
     }
+
+    .pages > a {
+        font-size: 1.5em;
+        line-height: 1.75em;
+    }
+
 </style>
 <div class="container">
     <div class="box">
@@ -123,51 +129,52 @@
 
         <br>
         <h3>Pages:</h3>
-        {#if has(project.modrinthId)}
-            <a href="https://modrinth.com/plugin/{project.modrinthId}" target="_blank">
-                <img src="https://modrinth.com/favicon.ico" alt="Link to {project.name} on Modrinth">
-                Modrinth
-            </a>
-            <br>
-        {/if}
+        <div class="pages">
+            {#if has(project.modrinthId)}
+                <a href="https://modrinth.com/plugin/{project.modrinthId}" target="_blank">
+                    <img src="https://modrinth.com/favicon.ico" alt="Link to {project.name} on Modrinth">
+                    Modrinth
+                </a>
+                <br>
+            {/if}
 
-        {#if has(project.polymartId)}
-            <a href="https://polymart.org/resource/{project.polymartId}" target="_blank">
-                <img src="https://polymart.org/style/logo_96.png" alt="Link to {project.name} on Polymart">
-                Polymart
-            </a>
-            <br>
-        {/if}
+            {#if has(project.polymartId)}
+                <a href="https://polymart.org/resource/{project.polymartId}" target="_blank">
+                    <img src="https://polymart.org/style/logo_96.png" alt="Link to {project.name} on Polymart">
+                    Polymart
+                </a>
+                <br>
+            {/if}
 
-        {#if has(project.spigotId)}
-            <a href="https://speedgot.vercel.app/resources/{project.spigotId}" target="_blank">
-                Speedgot
-            </a>
-            <br>
-            <a href="https://spigotmc.org/resources/{project.spigotId}" target="_blank">
-                <img src="/img/spigot.ico" alt="Link to {project.name} on Spigot">
-                SpigotMC
-            </a>
-            <br>
-        {/if}
+            {#if has(project.spigotId)}
+                <a href="https://speedgot.vercel.app/resources/{project.spigotId}" target="_blank">
+                    Speedgot
+                </a>
+                <br>
+                <a href="https://spigotmc.org/resources/{project.spigotId}" target="_blank">
+                    <img src="/img/spigot.ico" alt="Link to {project.name} on Spigot">
+                    SpigotMC
+                </a>
+                <br>
+            {/if}
 
-        {#if has(project.github) || has(project.gitlab)}
-            <a href="https://{project.github ? 'github' : 'gitlab'}.com/{project.github ? project.github : project.gitlab}" target="_blank">
-                <Icon icon="carbon:code" alt="Link to {project.name} on {project.github ? 'GitHub' : 'GitLab'}"/>
-                Source Code
-            </a>
-            <br>
-        {/if}
+            {#if has(project.github) || has(project.gitlab)}
+                <a href="https://{project.github ? 'github' : 'gitlab'}.com/{project.github ? project.github : project.gitlab}" target="_blank">
+                    <Icon icon="carbon:code" alt="Link to {project.name} on {project.github ? 'GitHub' : 'GitLab'}"/>
+                    Source Code
+                </a>
+                <br>
+            {/if}
 
-        {#if has(project.webpage)}
-            <a href="{project.webpage}" target="_blank">
-                <Icon icon="mdi:web" alt="Link to {project.name}"/>
-                Webpage
-            </a>
-            <br>
-        {/if}
+            {#if has(project.webpage)}
+                <a href="{project.webpage}" target="_blank">
+                    <Icon icon="mdi:web" alt="Link to {project.name}"/>
+                    Webpage
+                </a>
+                <br>
+            {/if}
 
-        <span class="docs">
+            <span class="docs">
             {#if has(project.docs)}
                 <br>
                 <span class="larger">
@@ -176,5 +183,6 @@
                 <br>
             {/if}
         </span>
+        </div>
     </div>
 </div>

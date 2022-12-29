@@ -219,7 +219,7 @@
 
 <nav on:click={toggleHamburger}>
     <a href="/">
-        <img src="https://ajg0702.us/pics/logo.png" alt="ajgeiss0702">
+        <img src="https://ajg0702.us/pics/logo.webp" alt="ajgeiss0702">
     </a>
     &nbsp;
     <div class="hamburger-container">

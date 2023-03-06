@@ -1,5 +1,5 @@
 <svelte:head>
-    <title>ajgeiss0702</title>
+    <title>About ajgeiss0702</title>
     <meta name="description" content="Hello! I'm aj and I am a developer. I mainly write in java, but I also occasionally make web pages (such as this one). I'm currently attending college studying Computer Science.">
 </svelte:head>
 <script>

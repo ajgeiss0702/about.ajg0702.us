@@ -4,6 +4,7 @@
     import {navigating} from "$app/stores";
     import NProgress from 'nprogress';
     import "$lib/misc.css";
+    import "../app.css"
 
     NProgress.configure({
         // Full list: https://github.com/rstacruz/nprogress#configuration
@@ -236,6 +237,9 @@
         </a>
         <a href="/#projects">
             Projects
+        </a>
+        <a href="/contact">
+            Contact
         </a>
     </div>
 </nav>

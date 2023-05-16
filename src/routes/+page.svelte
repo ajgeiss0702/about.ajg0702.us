@@ -44,7 +44,6 @@
     }
 
     .main-header > img {
-        width: 622px;
-        height: 144px;
+        height: min(144px, 22vw);
     }
 </style>

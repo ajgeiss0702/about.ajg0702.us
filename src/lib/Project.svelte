@@ -17,32 +17,17 @@
     }
 
     .outer {
+        font-size: 1.05em;
         display: inline-block;
         border-style: solid;
         border-color: goldenrod;
-        padding: 0.5em;
+        padding: 0.75em;
         border-radius: 0.5em;
 
-        font-size: 1em;
-
-        width: 25vw;
+        width: min(400px, 98vw);
         min-width: 250px !important;
 
-        background-color: rgba(0, 0, 0, 0.1);
-
         margin: 0.25em;
-    }
-
-    @media (prefers-color-scheme: light) {
-        .outer {
-            background-color: rgba(0, 0, 0, 0.025);
-
-        }
-    }
-    @media (prefers-color-scheme: dark) {
-        .outer {
-            background-color: rgba(0, 0, 0, 0.1);
-        }
     }
     @media (orientation: portrait) {
         .outer {
@@ -53,7 +38,7 @@
     .title {
         text-align: left;
         display: block;
-        font-size: 1.25em;
+        font-size: 1.35em;
         font-family: JelleeBold,ui-rounded;
     }
 
@@ -66,14 +51,20 @@
         height: 0;
     }
     .icon > img {
-        height: 1.75em;
+        height: 1.5em;
         border-radius: 0.15em;
+        width: auto;
     }
 
     .description {
         text-align: center;
         display: block;
-        min-height: 2em;
+        min-height: 3em;
+    }
+
+    .downloads {
+        display: block;
+        min-height: 1.5em;
     }
 
     .icons {
@@ -96,20 +87,20 @@
     }
 </style>
 
-<div class="outer">
+<div class="outer card">
     <span class="title">
         <a href="/project/{project.name}">{project.name}</a>
         <LazyLoad height="0">
             <span class="icon">
                 {#if has(project.icon)}
-                    <img height="1.75em" width="43.75em" src={project.icon} alt="{project.name} icon">
+                    <img src={project.icon} alt="{project.name} icon">
                 {/if}
             </span>
         </LazyLoad>
         <noscript>
             <span class="icon">
                 {#if has(project.icon)}
-                    <img height="1.75em" width="43.75em" src={project.icon} alt="{project.name} icon">
+                    <img src={project.icon} alt="{project.name} icon">
                 {/if}
             </span>
         </noscript>
@@ -132,31 +123,56 @@
 
     <span class="icons">
         {#if has(project.modrinthId)}
-            <a href="https://modrinth.com/plugin/{project.modrinthId}" target="_blank" aria-label="Link to {project.name} on Modrinth">
+            <a
+                    href="https://modrinth.com/plugin/{project.modrinthId}"
+                    target="_blank"
+                    aria-label="Link to {project.name} on Modrinth"
+                    title="Link to {project.name} on Modrinth"
+            >
                 <img src="/img/modrinth.webp" alt="Link to {project.name} on Modrinth">
             </a>
         {/if}
 
         {#if has(project.polymartId)}
-            <a href="https://polymart.org/resource/{project.polymartId}" target="_blank"  aria-label="Link to {project.name} on Polymart">
+            <a
+                    href="https://polymart.org/resource/{project.polymartId}"
+                    target="_blank"
+                    aria-label="Link to {project.name} on Polymart"
+                    title="Link to {project.name} on Polymart"
+            >
                 <img src="https://polymart.org/style/logo_96.png" alt="Link to {project.name} on Polymart">
             </a>
         {/if}
 
         {#if has(project.spigotId)}
-            <a href="https://spigotmc.org/resources/{project.spigotId}" target="_blank"  aria-label="Link to {project.name} on Spigot">
+            <a
+                    href="https://spigotmc.org/resources/{project.spigotId}"
+                    target="_blank"
+                    aria-label="Link to {project.name} on Spigot"
+                    title="Link to {project.name} on Spigot"
+            >
                 <img src="/img/spigot.webp" alt="Link to {project.name} on Spigot">
             </a>
         {/if}
 
         {#if has(project.github) || has(project.gitlab)}
-            <a href="https://{project.github ? 'github' : 'gitlab'}.com/{project.github ? project.github : project.gitlab}" target="_blank"  aria-label="Link to the source code for {project.name}">
+            <a
+                    href="https://{project.github ? 'github' : 'gitlab'}.com/{project.github ? project.github : project.gitlab}"
+                    target="_blank"
+                    aria-label="Link to the source code for {project.name}"
+                    title="Link to the source code for {project.name}"
+            >
                 <Icon icon="carbon:code" alt="Link to {project.name} on {project.github ? 'GitHub' : 'GitLab'}"/>
             </a>
         {/if}
 
         {#if has(project.webpage)}
-            <a href="{project.webpage}" target="_blank"  aria-label="Link to the webpage for {project.name}">
+            <a
+                    href="{project.webpage}"
+                    target="_blank"
+                    aria-label="Link to the webpage for {project.name}"
+                    title="Link to the webpage for {project.name}"
+            >
                 <Icon icon="mdi:web" alt="Link to {project.name}"/>
             </a>
         {/if}

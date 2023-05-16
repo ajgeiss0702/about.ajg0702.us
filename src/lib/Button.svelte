@@ -3,31 +3,24 @@
     export let target = "_self";
     export let aria_label;
 </script>
-<style>
-    a {
-        display: inline-block;
-
-        color: goldenrod;
-        border-color: goldenrod;
-
-        border-style: solid;
-        border-radius: 0.25em;
-
-        padding: 0.1em 0.25em 0;
-
-        font-size: 0.75em;
-
-        text-decoration: none;
-    }
-    a:hover {
-        border-color: darkgoldenrod;
-    }
-    @media (prefers-color-scheme: light) {
-        a {
-            color: darkgoldenrod;
-        }
-    }
-</style>
-<a {href} {target} {aria_label}>
+<a {href} {target} {aria_label} class="btn variant-ringed-primary anchor p-2 py-1">
     <slot/>
 </a>
+
+<style>
+    a {
+        font-size: 0.8em;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    a:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    :global(.dark) a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+</style>

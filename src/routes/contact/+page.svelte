@@ -1,7 +1,7 @@
 <div class="limit mx-auto">
-    <h1>Contact Me</h1>
+    <h1 class="h1">Contact Me</h1>
 
-    <h2>Discord</h2>
+    <h2 class="h2">Discord</h2>
 
     If you already share a discord server with me, the best way to reach me is on discord.
     <br>
@@ -10,7 +10,7 @@
     My discord is <span class="numbers">ajgeiss0702#0702</span>
     <br>
 
-    <h2>Email</h2>
+    <h2 class="h2">Email</h2>
 
     The second best way to contact me is via email.<br>
     My main email address is

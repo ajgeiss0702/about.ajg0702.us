@@ -23,7 +23,7 @@
     }
 </style>
 <div class="cont">
-    <h1>{title}</h1>
+    <h1 class="h1">{title}</h1>
     {#each projects.filter(p => p.tags.indexOf(data.tag) !== -1) as project (project)}
         <Project {project}/>
     {/each}

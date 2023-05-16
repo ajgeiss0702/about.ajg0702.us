@@ -11,13 +11,13 @@
     <meta name="description" content="{project.description}" />
 </svelte:head>
 <script lang="ts">
-    import {type Project} from "$lib/projects";
     import DownloadCounter from "$lib/DownloadCounter.svelte";
     import {has} from "$lib/utils";
     import Icon from "@iconify/svelte";
     import Button from "$lib/Button.svelte";
     import Tag from "$lib/Tag.svelte";
     import {capitalize} from "$lib/utils";
+    import type {Project} from "$lib/projects";
 
     export let data: Project;
 
@@ -112,7 +112,7 @@
                 <img src={project.icon} alt="{project.name} icon" height="64" width="64">
             {/if}
             <div class="title-container">
-                <h2>{project.name}</h2>
+                <h2 class="h2">{project.name}</h2>
                 {project.description}
             </div>
             <br>
@@ -129,7 +129,7 @@
         {/each}
 
         <br>
-        <h3>Pages:</h3>
+        <h3 class="h3">Pages:</h3>
         <div class="pages">
             {#if has(project.modrinthId)}
                 <a href="https://modrinth.com/plugin/{project.modrinthId}" target="_blank">

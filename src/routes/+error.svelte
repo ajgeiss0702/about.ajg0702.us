@@ -2,7 +2,7 @@
   import { page } from '$app/stores';
 </script>
 <div style="text-align: center;">
-    <h1>{$page.status}</h1>
+    <h1 class="h1">{$page.status}</h1>
     {$page.error.message}
 </div>
 

@@ -7,19 +7,11 @@
     import {projects} from "$lib/projects.ts";
     import Tag from "$lib/Tag.svelte";
 </script>
-<style>
-    .center {
-        text-align: center;
-    }
-    a.tag {
-        color: inherit;
-    }
-</style>
 
 
 <div class="center">
-    <h1 class="h1">
-        <img src="https://ajg0702.us/pics/logo.webp"/>
+    <h1 class="main-header">
+        <img src="https://ajg0702.us/pics/logo.webp" alt="ajgeiss0702"/>
     </h1>
     <div id="intro" class="hash-anchor"></div>
     <h2 class="h2">Hello!</h2>
@@ -43,3 +35,16 @@
     </div>
 </div>
 
+<style>
+    .center {
+        text-align: center;
+    }
+    a.tag {
+        color: inherit;
+    }
+
+    .main-header > img {
+        width: 622px;
+        height: 144px;
+    }
+</style>

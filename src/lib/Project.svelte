@@ -39,7 +39,6 @@
         text-align: left;
         display: block;
         font-size: 1.35em;
-        font-family: JelleeBold,ui-rounded;
     }
 
     .icon {

@@ -11,7 +11,6 @@
 <style>
     .downloads {
         font-size: 1em;
-        font-family: ui-rounded;
         margin-left: auto;
         line-height: 0.5em;
         padding-bottom: 0.5em;

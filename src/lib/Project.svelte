@@ -70,6 +70,7 @@
         font-size: 1.5em;
         text-align: left;
         display: block;
+        min-height: 1em;
     }
 
     .docs {

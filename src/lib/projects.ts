@@ -198,5 +198,24 @@ export const projects: Project[] = [
         webpage: "https://ajlb-viewer.ajg0702.us/",
         github: "ajgeiss0702/ajlb-viewer",
         tags: ["website", "svelte"]
+    },
+    {
+        name: "When is WAN",
+        icon: "https://wheniswan.pages.dev/wan.webp",
+        description: "Counts down until the next WAN show. Also tracks the start/end times of previous shows",
+        webpage: "https://wheniswan.pages.dev",
+        github: "ajgeiss0702/wheniswan",
+        tags: ["website", "svelte"]
+    }, {
+        name: "ajBuyerVerify frontend",
+        icon: "https://verify.ajg0702.us/ajBuyerVerify.webp",
+        description: "Frontend for automatic buyer verification for my Discord server",
+        webpage: "https://verify.ajg0702.us",
+        tags: ["website", "svelte"]
+    }, {
+        name: "ajBuyerVerify bot",
+        icon: "https://verify.ajg0702.us/ajBuyerVerify.webp",
+        description: "Discord bot for automatic buyer verification",
+        tags: ["discord-bot", "java"]
     }
 ]

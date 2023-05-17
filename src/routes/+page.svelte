@@ -9,7 +9,7 @@
 </script>
 
 
-<div class="center">
+<div class="center mb-32">
     <h1 class="main-header">
         <img src="https://ajg0702.us/pics/logo.webp" alt="ajgeiss0702"/>
     </h1>

@@ -54,7 +54,7 @@
 						on:click={() => {drawerStore.open({ id: "sideNavBar", position: "right"})}}
 						aria-label="Navigation Menu"
 				>
-					<Icon icon="majesticons:menu" width="3em"/>
+					<Icon icon="majesticons:menu" height="2.75em"/>
 				</button>
 			</span>
 		</svelte:fragment>
@@ -109,11 +109,6 @@
 	.mobile-nav {
 		display: inline-block;
 		margin-left: auto;
-	}
-
-	.mobile-nav > button {
-		width: 3em;
-		height: 3em;
 	}
 
 	@media (min-width: 700px) {

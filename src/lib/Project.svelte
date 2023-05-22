@@ -121,7 +121,7 @@
         <span></span>
     {/each}
 
-    <span class="icons">
+    <span class="icons mt-2">
         {#if has(project.modrinthId)}
             <a
                     href="https://modrinth.com/plugin/{project.modrinthId}"

@@ -33,7 +33,7 @@
     }
 
     h2 {
-        line-height: 0;
+        line-height: 1em;
     }
     h3 {
         margin-bottom: 0.25em;
@@ -112,7 +112,7 @@
                 <img src={project.icon} alt="{project.name} icon" height="64" width="64">
             {/if}
             <div class="title-container">
-                <h2 class="h2">{project.name}</h2>
+                <h2 class="h2 mb-0">{project.name}</h2>
                 {project.description}
             </div>
             <br>

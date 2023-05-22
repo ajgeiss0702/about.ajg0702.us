@@ -1,8 +1,6 @@
 <script>
-    import {onMount} from "svelte";
     import {goto} from "$app/navigation";
+    import {browser} from "$app/environment";
 
-    onMount(() => {
-        goto("/")
-    })
+    if(browser) goto("/")
 </script>

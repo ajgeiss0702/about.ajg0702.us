@@ -11,8 +11,10 @@
 
 	import '$lib/misc.css';
 
-	import {AppBar, autoModeWatcher} from '@skeletonlabs/skeleton';
+	import {AppBar, autoModeWatcher, Drawer, drawerStore} from '@skeletonlabs/skeleton';
 	import NavLinks from "../lib/NavLinks.svelte";
+	import Icon from "@iconify/svelte";
+	import {afterNavigate} from "$app/navigation";
 
 	NProgress.configure({
 		// Full list: https://github.com/rstacruz/nprogress#configuration
@@ -28,20 +30,9 @@
 		}
 	}
 
-	function toggleHamburger(e) {
-		let check = document.getElementById('hamburger-check');
-		let collapsable = document.querySelector('div.links');
-		if (e.target.tagName === 'A') {
-			check.checked = false;
-			console.log('unchecking!');
-		}
-		if (check.checked) {
-			collapsable.classList.remove('hidden');
-		} else {
-			collapsable.classList.add('hidden');
-		}
-		console.log('hidden: ' + collapsable.classList.contains('hidden'));
-	}
+	afterNavigate(() => {
+		drawerStore.close()
+	})
 </script>
 
 <svelte:head>
@@ -49,13 +40,37 @@
 </svelte:head>
 
 <div class="sticky w-screen top-0 mb-4 appbar">
-	<AppBar padding="p-2 pl-6" background="">
+	<AppBar padding="p-2 pl-6 pr-0" background="">
 		<a href="/">
 			<img src="https://ajg0702.us/pics/logo.webp" alt="ajgeiss0702" />
 		</a>
-		<NavLinks/>
+		<span class="desktop-nav">
+			<NavLinks/>
+		</span>
+		<svelte:fragment slot="trail">
+			<span class="mobile-nav">
+				<button
+						class="hidden-button p-0"
+						on:click={() => {drawerStore.open({ id: "sideNavBar", position: "right"})}}
+						aria-label="Navigation Menu"
+				>
+					<Icon icon="majesticons:menu" width="3em"/>
+				</button>
+			</span>
+		</svelte:fragment>
 	</AppBar>
 </div>
+
+<Drawer>
+	{#if $drawerStore.id === "sideNavBar"}
+		<button class="btn p-2 ml-2 closeButton" on:click={() => drawerStore.close()}>
+			<Icon icon="fa6-solid:x" style="height: 2.5em; width: 2.5em;"/>
+		</button>
+		<div class="text-center">
+			<NavLinks vertical={true}/>
+		</div>
+	{/if}
+</Drawer>
 
 
 <slot />
@@ -89,6 +104,28 @@
 	img {
 		height: 2.25em;
 		display: inline-block;
+	}
+
+	.mobile-nav {
+		display: inline-block;
+		margin-left: auto;
+	}
+
+	.mobile-nav > button {
+		width: 3em;
+		height: 3em;
+	}
+
+	@media (min-width: 700px) {
+		.mobile-nav {
+			display: none;
+		}
+	}
+
+	@media (max-width: 700px) {
+		.desktop-nav {
+			display: none;
+		}
 	}
 
 </style>

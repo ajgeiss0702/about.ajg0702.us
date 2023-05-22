@@ -138,7 +138,7 @@ export const projects: Project[] = [
     },
     {
         name: "Bytebin",
-        description: "My fork of Bytebin that has modifications for my self-hosted site.",
+        description: "My fork of Bytebin that has modifications for my self-hosted instance.",
         icon: "/img/bytebin.png",
         github: "ajgeiss0702/bytebin/",
         webpage: "https://paste.ajg0702.us/",

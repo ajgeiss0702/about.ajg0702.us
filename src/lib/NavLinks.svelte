@@ -1,9 +1,9 @@
 
 <span class:vertical={vertical}>
-    <a href="/#intro" class="anchor">
+    <a href="/#intro" class="anchor" on:click={close}>
         Introduction
     </a>
-    <a href="/#projects" class="anchor">
+    <a href="/#projects" class="anchor" on:click={close}>
         Projects
     </a>
     <a href="/contact" class="anchor">
@@ -23,5 +23,14 @@
     }
 </style>
 <script>
+    import {drawerStore} from "@skeletonlabs/skeleton";
+    import {page} from "$app/stores";
+
     export let vertical = false;
+
+    function close() {
+        if($page.url.pathname === "/") {
+            drawerStore.close();
+        }
+    }
 </script>

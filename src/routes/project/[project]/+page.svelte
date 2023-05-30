@@ -141,7 +141,7 @@
 
             {#if has(project.polymartId)}
                 <a href="https://polymart.org/resource/{project.polymartId}" target="_blank">
-                    <img src="https://polymart.org/style/logo_96.png" alt="Link to {project.name} on Polymart">
+                    <img src="/img/p.svg" alt="Link to {project.name} on Polymart">
                     Polymart
                 </a>
                 <br>

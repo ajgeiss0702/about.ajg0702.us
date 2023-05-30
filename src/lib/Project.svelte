@@ -140,7 +140,7 @@
                     aria-label="Link to {project.name} on Polymart"
                     title="Link to {project.name} on Polymart"
             >
-                <img src="https://polymart.org/style/logo_96.png" alt="Link to {project.name} on Polymart">
+                <img src="/img/p.svg" alt="Link to {project.name} on Polymart">
             </a>
         {/if}
 

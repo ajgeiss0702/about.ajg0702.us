@@ -4,7 +4,11 @@
 declare namespace App {
 	// interface Locals {}
 	// interface PageData {}
-	// interface Platform {}
+	interface Platform {
+        env?: {
+            CACHE: KVNamespace
+        }
+    }
 	// interface PrivateEnv {}
 	// interface PublicEnv {}
 }

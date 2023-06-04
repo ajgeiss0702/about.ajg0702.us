@@ -11,7 +11,7 @@
 
 <div class="center mb-32">
     <h1 class="main-header">
-        <img src="https://ajg0702.us/pics/logo.webp" alt="ajgeiss0702"/>
+        <img src="/img/logo.webp" alt="ajgeiss0702"/>
     </h1>
     <div id="intro" class="hash-anchor"></div>
     <h2 class="h2">Hello!</h2>

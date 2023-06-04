@@ -16,7 +16,7 @@ const config = {
 	kit: {
 		adapter: adapter({
 			routes: {
-				include: ["/api/*", "/pl/*"]
+				include: ["/api/*", "/pl/*", "/img/plugins/header", "/img/plugins/header.php"]
 			}
 		}),
 		csp: {

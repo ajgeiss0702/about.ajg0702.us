@@ -1,6 +1,5 @@
 import type {RequestHandler} from "@sveltejs/kit";
 import {error} from "@sveltejs/kit";
-import {dev} from "$app/environment";
 
 export const GET = (async ({url, platform}) => {
 

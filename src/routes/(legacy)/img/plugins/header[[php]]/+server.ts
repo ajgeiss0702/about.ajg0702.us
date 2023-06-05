@@ -3,7 +3,7 @@ import {error} from "@sveltejs/kit";
 
 export const GET = (async ({url, platform}) => {
 
-    const text = url.searchParams.get("text") ?? "Default text";
+    const text = url.searchParams.get("text") || "Default text";
     const shortCache = url.searchParams.has("shortcache");
 
     const cache = platform?.env?.CACHE;
@@ -22,7 +22,7 @@ export const GET = (async ({url, platform}) => {
 
     // Cache for 7 days (shortcache only for 12 hours)
     await cache.put(text, img, {
-        expirationTtl: shortCache ? 12 * 60 * 60 :  7 * 24 * 60 * 60
+        expirationTtl: shortCache ? 12 * 60 * 60 : 7 * 24 * 60 * 60
     });
 
     return new Response(img);

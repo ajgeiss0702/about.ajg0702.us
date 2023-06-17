@@ -8,7 +8,7 @@
         <br>
         <b>I do not accept friend requests!</b>
         <br>
-        My discord is <span class="numbers">ajgeiss0702#0702</span>
+        My discord is <span class="numbers">ajgeiss0702</span> (no hash/discriminator)
     </p>
     <br>
 

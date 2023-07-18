@@ -137,37 +137,10 @@ export const projects: Project[] = [
         tags: ["plugin", "java"]
     },
     {
-        name: "Bytebin",
-        description: "My fork of Bytebin that has modifications for my self-hosted instance.",
-        icon: "/img/bytebin.png",
-        github: "ajgeiss0702/bytebin/",
-        webpage: "https://paste.ajg0702.us/",
-        tags: ["website"]
-    },
-    {
         name: "VulcanTopGUI",
         description: "An addon for the Vulcan anticheat that opens a GUI of the top player violations ",
         github: "ajgeiss0702/VulcanTopGUI/",
         tags: ["plugin", "java"]
-    },
-    {
-        name: "ajSupport",
-        description: "A discord bot that assists me in my plugins support discord",
-        icon: "https://ajg0702.us/pics/bots/ajSupport.png",
-        github: "ajgeiss0702/ajSupport/",
-        tags: ["discord-bot", "java"]
-    },
-    {
-        name: "ajLavaRising",
-        description: "A lag-less lava rising plugin ",
-        github: "ajgeiss0702/ajLavaRising/",
-        tags: ["plugin", "java"]
-    },
-    {
-        name: "ajHologramConnector",
-        description: "One library for all the major hologram plugin APIs (with bukkit fallback)",
-        github: "ajgeiss0702/ajHologramConnector/",
-        tags: ["plugin-library", "java"]
     },
     {
         name: "About ajgeiss0702",
@@ -175,6 +148,14 @@ export const projects: Project[] = [
         description: "This site!",
         webpage: "/",
         github: "ajgeiss0702/about.ajg0702.us",
+        tags: ["website", "svelte"]
+    },
+    {
+        name: "Whenplane",
+        icon: "https://whenplane.com/wan.webp",
+        description: "Counts down until the next WAN show. Also tracks the start/end times of previous shows",
+        webpage: "https://whenplane.com",
+        github: "ajgeiss0702/wheniswan",
         tags: ["website", "svelte"]
     },
     {
@@ -200,22 +181,43 @@ export const projects: Project[] = [
         tags: ["website", "svelte"]
     },
     {
-        name: "When is WAN",
-        icon: "https://wheniswan.pages.dev/wan.webp",
-        description: "Counts down until the next WAN show. Also tracks the start/end times of previous shows",
-        webpage: "https://wheniswan.pages.dev",
-        github: "ajgeiss0702/wheniswan",
-        tags: ["website", "svelte"]
-    }, {
         name: "ajBuyerVerify frontend",
         icon: "https://verify.ajg0702.us/ajBuyerVerify.webp",
         description: "Frontend for automatic buyer verification for my Discord server",
         webpage: "https://verify.ajg0702.us",
         tags: ["website", "svelte"]
-    }, {
+    },
+    {
         name: "ajBuyerVerify bot",
         icon: "https://verify.ajg0702.us/ajBuyerVerify.webp",
-        description: "Discord bot for automatic buyer verification",
+        description: "Discord bot for my automatic buyer verification system",
         tags: ["discord-bot", "java"]
-    }
+    },
+    {
+        name: "ajSupport",
+        description: "A discord bot that assists me in my plugins support discord",
+        icon: "https://ajg0702.us/pics/bots/ajSupport.png",
+        github: "ajgeiss0702/ajSupport/",
+        tags: ["discord-bot", "java"]
+    },
+    {
+        name: "ajLavaRising",
+        description: "A lag-less lava rising plugin ",
+        github: "ajgeiss0702/ajLavaRising/",
+        tags: ["plugin", "java"]
+    },
+    {
+        name: "ajHologramConnector",
+        description: "One library for all the major hologram plugin APIs (with bukkit fallback)",
+        github: "ajgeiss0702/ajHologramConnector/",
+        tags: ["plugin-library", "java"]
+    },
+    {
+        name: "Bytebin",
+        description: "My fork of Bytebin that has modifications for my self-hosted instance.",
+        icon: "/img/bytebin.png",
+        github: "ajgeiss0702/bytebin/",
+        webpage: "https://paste.ajg0702.us/",
+        tags: ["website"]
+    },
 ]

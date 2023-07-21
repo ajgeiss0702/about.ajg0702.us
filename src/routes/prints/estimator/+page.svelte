@@ -1,5 +1,5 @@
 <script>
-    import "../../../app.postcss";
+    import "../../../app.css";
 
     let hoursDone = 0;
     let minutesDone = 30;

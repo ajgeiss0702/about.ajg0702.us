@@ -1,4 +1,10 @@
-/* Write your global styles here, in PostCSS syntax */
+@media (prefers-color-scheme: dark) {
+    .predark { /* the predark class prevents flashbangs if for some reason the js dark theme detection is slow */
+        background-color: #262626;
+        color: white;
+        @apply dark;
+    }
+}
 
 .text-center {
 	text-align: center;

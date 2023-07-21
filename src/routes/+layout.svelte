@@ -3,7 +3,7 @@
 
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
 
-	import '../app.postcss';
+	import '../app.css';
 	// NProgress css
 	import 'nprogress/nprogress.css';
 	import { navigating } from '$app/stores';
@@ -44,7 +44,7 @@
 </script>
 
 <svelte:head>
-	{@html `<script>${autoModeWatcher.toString()} autoModeWatcher();</script>`}
+	{@html `<script>${autoModeWatcher.toString()} autoModeWatcher(); document.documentElement.classList.remove("predark")</script>`}
 </svelte:head>
 
 <div class="sticky w-screen top-0 mb-4 appbar">

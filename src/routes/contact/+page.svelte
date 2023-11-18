@@ -19,8 +19,7 @@
         My main email address is
         <a href="mailto:ajgeiss0702@ajg0702.us" class="font-bold">ajgeiss0702@ajg0702.us</a>
         <br>
-        However, sometimes my mail server is kinda dumb, so I'd recommend CC'ing
-        <b>ajgeiss72@gmail.com</b>
+        I used to recommend CC'ing my gmail due to unreliability, but I have changed email providers so that is no longer an issue.
     </p>
 </div>
 

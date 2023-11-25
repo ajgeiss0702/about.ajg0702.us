@@ -8,7 +8,7 @@
         <br>
         <b>I do not accept friend requests!</b>
         <br>
-        My discord is <span class="numbers">ajgeiss0702</span> (no hash/discriminator)
+        My discord is <code class="code">ajgeiss0702</code> (no hash/discriminator)
     </p>
     <br>
 
@@ -17,8 +17,8 @@
     <p>
         The second best way to contact me is via email.<br>
         My main email address is
-        <a href="mailto:ajgeiss0702@ajg0702.us" class="font-bold">ajgeiss0702@ajg0702.us</a>
-        <br>
+        <a href="mailto:aj@ajg0702.us" class="font-bold" target="_blank" rel="noopener"><code class="code">aj@ajg0702.us</code></a>
+        <br class="mb-2">
         I used to recommend CC'ing my gmail due to unreliability, but I have changed email providers so that is no longer an issue.
     </p>
 </div>

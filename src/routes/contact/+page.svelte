@@ -1,3 +1,6 @@
+<svelte:head>
+    <title>Contact me - ajgeiss0702</title>
+</svelte:head>
 <div class="limit mx-auto p-2">
     <h1 class="h1">Contact Me</h1>
 

@@ -34,6 +34,7 @@
         {/each}
     </div>
 </div>
+<a href="/go">.</a>
 
 <style>
     .center {

@@ -1,4 +1,4 @@
 /pics/* /img/:splat 200
-/projects/ajqueue /projects/ajQueue
-/projects/ajqueueplus /projects/ajQueuePlus
-/projects/ajleaderboards /projects/ajLeaderboards
+/project/ajqueue /project/ajQueue
+/project/ajqueueplus /project/ajQueuePlus
+/project/ajleaderboards /project/ajLeaderboards

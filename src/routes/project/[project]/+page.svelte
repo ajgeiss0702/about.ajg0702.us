@@ -148,7 +148,7 @@
             {/if}
 
             {#if has(project.spigotId)}
-                <a href="https://speedgot.vercel.app/resources/{project.spigotId}" target="_blank">
+                <a href="https://speedgot.ajg0702.us/resources/{project.spigotId}" target="_blank">
                     Speedgot
                 </a>
                 <br>

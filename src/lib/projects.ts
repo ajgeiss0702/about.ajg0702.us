@@ -166,6 +166,14 @@ export const projects: Project[] = [
         tags: ["website", "svelte"]
     },
     {
+        name: "Speedgot",
+        icon: "https://speedgot.ajg0702.us/favicon.png",
+        description: "A spigot proxy that's meant to be faster than the original site",
+        webpage: "https://speedgot.ajg0702.us",
+        github: "ajgeiss0702/speedgot",
+        tags: ["website", "svelte"]
+    },
+    {
         name: "BASIS Peoria Boosters",
         icon: "https://basis-peoria-boosters.pages.dev/favicon.png",
         description: "Informational website for BASIS Peoria Boosters (made entirely myself using SvelteKit)",
